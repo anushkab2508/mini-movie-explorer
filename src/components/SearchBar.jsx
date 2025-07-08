@@ -25,7 +25,7 @@ function SearchBar({ onResults }) {
         console.error("API error:", err);
         onResults([]);
       });
-  }, [debouncedQuery, onResults]); // ✅ included 'onResults'
+  }, [debouncedQuery, onResults]);
 
   return (
     <input

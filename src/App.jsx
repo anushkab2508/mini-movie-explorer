@@ -1,4 +1,3 @@
-// App.jsx
 import { useState, useEffect } from "react";
 import SearchBar from "./components/SearchBar";
 import MovieCard from "./components/MovieCard";
@@ -23,7 +22,6 @@ function App() {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
-  // Fetch random suggestions on load
   useEffect(() => {
     fetch(
       `https://www.omdbapi.com/?s=avengers&apikey=${
@@ -49,14 +47,14 @@ function App() {
   };
 
   const openMovieModal = async (id) => {
-    console.log("Fetching full details for:", id); // ✅ check console
+    console.log("Fetching full details for:", id);
     const res = await fetch(
       `https://www.omdbapi.com/?i=${id}&apikey=${
         import.meta.env.VITE_OMDB_API_KEY
       }`
     );
     const data = await res.json();
-    console.log("Fetched data:", data); // ✅ this MUST show the full movie object
+    console.log("Fetched data:", data);
     if (data.Response === "True") {
       setSelectedMovie(data);
     }
