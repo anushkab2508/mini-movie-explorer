@@ -22,7 +22,21 @@ This project demonstrates modern front-end practices including debounced search,
 🌐 [View Deployed App on Vercel](https://mini-movie-explorer-three.vercel.app/)
 
 ---
+## 🧠 How I Approached It
 
+I structured the Mini Movie Explorer project with simplicity and clarity in mind, using **React** and **Vite** for a fast, modern development experience.
+
+- I broke the UI into **reusable components** — `SearchBar`, `MovieCard`, `Watchlist`, and `MovieModal` — for modular and maintainable code.
+- Used **React's `useState` and `useEffect`** hooks to manage state like search results, theme, selected movie, and watchlist.
+- Implemented **debouncing** in the search bar to avoid excessive API calls and improve performance.
+- The **watchlist** is saved in **localStorage**, ensuring persistence across reloads.
+- **Dark mode** is applied dynamically using CSS variables and a `data-theme` attribute on the `<html>` tag.
+- Clicking a movie card opens a **modal** with complete details fetched from the OMDb API.
+- The layout uses CSS Flexbox and is **fully responsive** across screen sizes.
+
+This project helped me solidify my understanding of React fundamentals, side effects, local storage, API handling, and clean UI design.
+
+---
 ## 🛠 Tech Stack
 
 - **Frontend:** React, JavaScript (ES6+), Vite
